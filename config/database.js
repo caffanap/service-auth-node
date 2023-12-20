@@ -1,4 +1,5 @@
 const db = require("diskdb")
+const { DATABASE_PATH } = require("./constant")
 
 class DatabaseContext {
     constructor() {
@@ -6,7 +7,7 @@ class DatabaseContext {
     }
 
     Initialize() {
-        this.context.connect("./data", ["users"])
+        this.context.connect(DATABASE_PATH, ["users"])
     }
 }
 
